@@ -1,0 +1,71 @@
+/* syntax: #[id] */
+#para1 {
+    color: burlywood;
+    font-style: oblique;
+    font-stretch: expanded;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    border-width: 5px 10px 12px 5px;
+    border-style: groove;
+    border-color: turquoise;
+}
+
+/* syntax: .[class] */
+.blue {
+    color: blue;
+   /* float: left */
+}
+
+.yellowbackground {
+    background-color: yellow;
+    height: 100px;
+    width: 100px;
+    /*padding can be done by defining all 4 sides (top-right-bottom-left*/
+    padding: 10px 5px 7px 25px;
+    border-radius: 50%;
+    margin: 20px;
+    clear: both
+}
+
+.bluebackground {
+    background-color: blue;
+    color: #ffffff;
+    height: auto;
+    width: auto;
+    padding: 16px;
+    outline-style: solid;
+    outline-color: black;
+    outline-width: thick;
+    float: left
+}
+
+.orangebackground {
+    background-color: orange;
+    height: auto;
+    width: auto;
+    /*padding can also be dinfed with H x W*/
+    padding: 45px 15px;
+    background-image: url(images/Joe-Exotic-Tiger-King.png);
+    background-size: 25% 25%;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    float: right;
+    -webkit-animation: myanimation 3s
+}
+
+@-webkit-keyframes myanimation {
+    from{background-color: green}
+    to{background-coloe: orange}
+
+}
+
+#cancer {
+    color: red
+}
+
+p {
+    margin: 0;
+    background-color: yellowgreen;
+    margin: 20px
+}
+

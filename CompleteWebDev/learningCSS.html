@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice with CSS</title>
+    <!--Internal CSS: The CSS formatting exists wtihin the HTML file, and then assigned out to the various 
+        tags it modifies
+        The formatting can be applied to the tags directly or based on attributes (like class, etc)-->
+    <style>
+        h1 {
+            color: green;
+            font-size: 300%;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 20px
+        }
+    </style>
+    <!--External CSS: Link to a separate CSS file that houses all the formatting-->
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
+</head>
+<body>
+    <h1>My Headings Will Look TIGHT</h1>
+    <!--"Inline CSS: Use of the 'style' attribute (it's IN the LINE-->
+    <p style="color:fuchsia; font-size: 200%"> Deciding what not to do is as important as deciding what to do</p>
+
+    <p id="para1">This paragraph is being styled based on the stylesheet.css file linked in the header. <br />
+    We know to garge this paragraph because of the id attribute in this paragraph's &lt;p&gt; tag</p>
+
+    <p class="blue">And this one is styled because of the class attribute</p>
+
+    <div class="bluebackground">
+        <p>Facebook is a fucking cancer</p>
+    </div>
+    <div class="yellowbackground"> 
+        <p>Apple</p>
+    </div>
+    <div class="orangebackground">
+        <p>Amazon</p>
+    </div>
+
+</body>
+</html>

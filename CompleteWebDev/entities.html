@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entities and Forms</title>
+</head>
+<body>
+    <form>
+        <label for="usrnam">User Name</label>
+        <input type="text" name="username" placeholder="User Name" maxlength="12" id="usrnam">
+        <label for="pw">Password</label>
+        <input type="password" name="password" placeholder="Password" maxlength="10" id="pw">
+        <input type="submit" value="Login">
+    </form>
+    <p>Please &nbsp;  enter user&nbsp;name and password above.</p>
+
+    <p> TIme to check out! Please enter details below</p>
+    <form>
+        <label for="name">Full Name</label>
+        <input type="text" placeholder="Full Name" id="name" size="30px"> <br />
+        <label for="add1">Address 1</label>
+        <input type="text" placeholder="Address 1" id="add1" size="30px"> <br />
+        <label for="add2">Address 2</label>
+        <input type="text" placeholder="Address 2" id="add2" size="30px"> <br />
+        <label for="city">City</label>
+        <input type="text" placeholder="City" id="city" size="30px"> <br />
+        <label for="state">State</label>
+        <input type="text" placeholder="State" id="state" size="30px"> <br />
+        <label for="zip">Zip Code</label>
+        <input type="text" placeholder="Poatal Code" id="zip" size="30px"> <br />
+        <p>Choose Shipping Method</p>
+        <select id="shipping" name="shipping">
+            <option value="free">Free Super-Saver Shipping</option>
+            <option value="2Day">UPS 2-day Shipping</option>
+            <option value="1day">UPS 1-day Air</option>
+            <option value="pickup">In-store Pick Up</option>
+        </select> 
+        <p>Choose Payment Method</p>
+        <label>Paypal<input type="radio"  name="payment" value="paypal"></label>
+        <label>Credit/Debit<input type="radio"  name="payment" value="cc"></label>
+        <label>Bitcoin<input type="radio"  name="payment" value="bitcoin"></label>
+        <p>Please add any additonal instructions for your order</p>
+        <label for="comments">Comments</label>
+        <textarea id="comments" rows="4" columns="40"></textarea>
+        <br />
+        <label>I'd like to receive email offers!<input type="checkbox" checked="checked" name="add-mnailing"></label> <br />
+        <label>Securly save my payment details<input type="checkbox" name="save-payment"></label> <br />
+        <input type="submit">
+        <p>BITCH <em>BETTER</em> <strike><i>HAVE</i> </strike>MY <strong>MONEY</strong></p>
+    </form>
+</body>
+</html>

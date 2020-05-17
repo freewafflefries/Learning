@@ -1,0 +1,118 @@
+<!--1.alertmessage.html-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset= "utf-8"></metacharset>
+        <style>
+        .bluebox {
+            background-color: #3A5795;
+            color: white;
+            height: 100px;
+            width:auto;}
+        .yellowbox {
+            background-color: rgb(222, 224, 85);
+            height: 100px;
+            width: auto;}
+            
+        .greenbox {
+            background-color: #31af37;
+            height: 100px;
+            width: auto;
+        }.great {
+            background-color: #5a3479;
+        }
+        #error {
+            color: red;
+        }
+        </style>
+            <title>alert message</title>
+        </head>
+        
+    <body>
+        <script type="text/javascript" src="js/code.js"></script>
+        <p>Javascript.</p>
+        <button id="click1">Click Me!</button>
+        <button onclick="alert('Well, do ya? Punk!')">Feeling Lucky?</button> <!--Here the JS programming is "in line" (part of tag attribute)-->
+       
+        <script>
+            document.getElementById("click1").onclick=function() {
+                alert('Oh yea, click me again, baby!!')  //Here we have made a script tag, and placed in JS script
+                                                        //Directly in the HTML doc
+            }
+
+        </script>
+        
+        <div class="bluebox"id="facebook">
+            <p>Facebook is <spanclass="great">great</span>.</p>
+        </div>
+        
+        <div class="yellowbox"id="apple">
+            <p>Apple.</p>
+        </div>
+        
+        <div class="greenbox">
+            <p>Microsoft.</p>
+        </div>
+        <button id="button1">Change facebook content.</button>
+        <button id="button2">Change apple content.</button>
+        <script>
+            document.getElementById("button1").onclick=function() {
+                document.getElementById("facebook").innerHTML = "<p>a.k.a SATAN!!!!!!!</p>";
+                document.getElementById("facebook").style.backgroundColor='red'
+            }
+
+            document.getElementById("button2").onclick = function() {
+                document.getElementById("apple").innerHTML = 
+                "<ul><li>Always</li><li>Punch</li><li>People</li><li>Less</li><li>Educated</li></ul>"
+            }
+        </script>
+        <script>
+            var myPhone= {
+                make :'Apple',
+                model : 'iPhone Xs',
+                iOS_ver : '13.4.1',
+                color : 'white',
+                serial : 'HDU485JKF7623',
+            }
+        </script>
+        <p id="error"></p>
+ 
+        <p>Your password should contain at last 1 number and 1 capital letter.</p>
+        <p>Enter password <br /> <input id="password" type="password"></p>
+        <p>Re-enter password <br /> <input id="password2" type="password"></p>
+        <button onclick="check()">Submit</button>
+        <p id="error"></p>
+        
+        <script>
+           function check() {
+               var password = document.getElementById("password").value
+               var password2 = document.getElementById("password2").value
+               var errorMsg = document.getElementById("error")
+               var errorToThrow = ""
+           
+           try {
+               if(password.length < 6){
+                   errorToThrow += "Password too short"
+                  
+               }
+               if(/[A-Z]/g.test(password) == false) {
+                   errorToThrow += "<br />Password must contain at least 1 capital Letter"
+                  
+               }
+               if(/\d/g.test(password) == false) {
+                   errorToThrow += "<br />Password must contain at least 1 digit"
+                  
+               }
+               if(password !== password2) {
+                   errorToThrow += "<br />Password entries do not match"
+                   
+               }
+               throw errorToThrow
+            }
+           catch(err) {
+               errorMsg.innerHTML = err 
+           }
+           }
+        </script>
+</body>
+</html>
